@@ -13,8 +13,10 @@ If you have multiple networks you connect to e.g. home and work or DHCP and your
 See the dnsmaq.conf for entries that need to be added to /usr/local/etc/dnsmasq.conf
 Then run the two bash scripts. you will probably need chown and run as sudo.
 
+```bash
 sudo ./updatehosts.sh
 sudo ./servicerestart.sh
+```
 
 This is not a prepackaged script you will have to clone or copy it and change values. I may make this an actual service eventually, but I just wanted to share my bash hack-tastic solution. Yeah it's gross and probably will break.
 
