@@ -1,5 +1,7 @@
 # avd-mac-dnsmasq
-A set of scripts and config settings to allow android to resolve local or docker hosts for API/web connections.
+A set of scripts and config settings to allow android to resolve local or docker hosts for API/web connections. 
+
+This is for Mac and tested with OSX High Sierra. I could be adopted to an ubuntu platform, but it would take work. Windows users :(
 
 ## The Problem 
 The problem is that Android Emulators make it difficult to talk to localhost so running DNSMASQ makes life easier.
