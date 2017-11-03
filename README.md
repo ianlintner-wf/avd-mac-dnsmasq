@@ -1,10 +1,10 @@
 # avd-mac-dnsmasq
-A set of scripts and config settings to allow android to resolve local or docker hosts for API/web connections. 
+A set of scripts and config settings to deal with DHCP and dynamic local IP addresses allow android to resolve local or docker hosts for API/web connections. 
 
 This is for Mac and tested with OSX High Sierra. I could be adopted to an ubuntu platform, but it would take work. Windows users :(
 
 ## The Problem 
-The problem is that Android Emulators make it difficult to talk to localhost so running DNSMASQ makes life easier.
+Android emulators can't connect to hosts loopback 127.0.0.1. Using dnsmasq these scripts create update dnsmasq temp configs with your en0 ip address, update /etc/resolver/loc and set the network interface to use the local dnsmasq on the actual ip address.
 
 If you have multiple networks you connect to e.g. home and work or DHCP and your local IP address changes this sets your local dev host to use the ipaddress so AVD and your android device can use it (if the ports are open and you have the Android on the same network and set its DNS to your computers IP).
 
